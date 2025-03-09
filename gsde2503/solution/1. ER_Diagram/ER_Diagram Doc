@@ -1,0 +1,32 @@
+There are 8 hierarchy tables and 2 fact tables as follows:
+
+1. hier_clnd --> The 'hier_clnd' table contains hierarchical data for date entity. It includes information about various entities, such as dates, workloads, and quarters.
+2. hier_hldy --> The 'stg_hier_hldy' table contains a hierarchical list of labels, which can be used as a reference for categorization and classification. It includes a unique identifier and a label for each holiday entity.
+3. hier_prod --> The 'stg_hier_prod' table contains hierarchical product information, including details about the product, its category, subcategory, and department. It also includes information about the product's style, color, and assembly status. This data can be used to understand the product's place in the hierarchy and to analyze the product's assembly and manufacturing processes. It can also help in tracking the product's performance in different categories and departments.
+4. hier_invstatus --> The 'stg_hier_invstatus' table contains information about the inventory hierarchy and its status. It includes details about the code, label, and ownership of each inventory item. This data can be used to track inventory levels, monitor inventory status, and manage inventory ownership. It can also help in identifying inventory items that may require further investigation or action. This information can be useful for inventory management, supply chain, and logistics teams.
+5. hier_pricestate --> The 'stg_hier_pricestate' table contains the hierarchical relationship between sub-states and states. It includes the sub-state and state labels, along with their respective unique identifiers.
+6. hier_rtlloc --> The 'stg_hier_rtlloc' table contains hierarchical location data for our retail stores. It includes information about the street, district, and region where each store is located.
+7. hier_possite --> The 'stg_hier_possite' table contains information about the hierarchical structure of our sites, channels, and sub-channels. It includes details such as the site ID, site label, sub-channel ID, sub-channel label, and channel ID. This data can be used to understand the organizational structure of our sites and channels, enabling better management and planning. It can also help in identifying the relationships between different levels of the hierarchy, such as which sub-channels belong to which channels.
+8. hier_invstatus --> The 'stg_hier_invstatus' table contains information about the inventory hierarchy and its status. It includes details about the code, label, and ownership of each inventory item. This data can be used to track inventory levels, monitor inventory status, and manage inventory ownership. It can also help in identifying inventory items that may require further investigation or action. This information can be useful for inventory management, supply chain, and logistics teams.
+9. fact_averagecosts --> The 'stg_fact_averagecosts' table contains average standard and landed costs for various SKUs. It can be used to analyze the cost structure of different products and their profitability. This data can help in making informed decisions about product pricing, inventory management, and supplier negotiations. Additionally, it can be used to identify trends in cost fluctuations and their impact on product profitability.
+10. fact_transactions --> he 'stg_fact_transactions' table contains transactional data from sales orders. It includes details such as the order and line ID, transaction type, date, and location. The table also includes information about the SKU, FSCL, and price state. This data can be used for analyzing sales trends, tracking order and line performance, and understanding the impact of discounts on sales. It can also help in identifying popular SKUs and locations, and optimizing inventory management.
+
+Note: Some of these are written with the help of AI feature
+
+No external tools were used to infer the schema.
+A Scala function was developed to take a table as input and return its schema as a string.
+Analysis was conducted by executing queries, with some results documented in the ERD & Analysis file.
+With the help of insights from above two steps, along with the Mural board, an Entity Relationship Diagram (ERD) was created and saved as a PNG file.
+
+The ERD is structured as follows:
+
+The two fact tables are centrally positioned, surrounded by hierarchical tables.
+The rightmost table represents the newly created mat_weekly_sales table.
+Each box represents a table, with:
+    The table name in bold at the top.
+    Columns listed below along with their data types.
+Relationships between tables are depicted using arrow lines.
+Primary Keys (PK) and Composite Keys (CK) are explicitly labeled.
+A sticky note is added at the bottom of each table, providing:
+    A brief definition of the table.
+    A sample data snippet for reference.

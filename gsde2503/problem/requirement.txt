@@ -1,0 +1,9 @@
+1.You must draw out an ER diagram showing raw table structure and any relationships between them that you can infer using column names. You may use schema inference tools, but you must document what you used and why. You must add the final ER diagram and any documentation explaining it to your submission’s Github repository.
+
+2. You must build a pipeline that
+    a. Loads this raw data into the data warehouse from external storage such as Azure Blobs, AWS S3 or the like. You must write basic checks such as non-null, uniqueness of primary key, data types. Also check for foreign key constraints between fact and dimension tables. Do it for at least one hier (dimension), and one fact table.
+    b. Create a staging schema where the hierarchy table has been normalized into a table for each level and the staged fact table has foreign key relationships with those tables.
+    c. Create a refined table called mview_weekly_sales which totals sales_units, sales_dollars, and discount_dollars by pos_site_id, sku_id, fsclwk_id, price_substate_id and type.
+    d. BONUS: write transformation logic that will incrementally calculate all the totals in the above table for partially loaded data.
+
+Note: Dataset will be added if needed.
